@@ -1,0 +1,50 @@
+.contacts {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: .5rem;
+
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	&__item {}
+	
+	&__link {
+		text-decoration: none;
+		display: inline-flex;
+		gap: .3rem;
+		color: var(--alpha-color);
+		font-weight: 600;
+		transition: 350ms color;
+
+		&:hover,
+		&:focus {
+			color: var(--betta-color);
+			transition: 350ms color;
+		}
+	}
+
+	&__link:hover &__icon {
+		transition: 350ms transform;
+		transform: rotateY(180deg);
+	}
+
+	&__icon {
+		transition: 350ms transform;
+	}
+
+	&--row {
+		flex-flow: row wrap;
+		align-items: center;
+	}
+
+	&--light &__link {
+		color: var(--alpha-color);
+	}
+
+	&--light &__link:hover,
+	&--light &__link:focus,
+	&--light &__link:active {
+		color: #FFF;
+	}
+}

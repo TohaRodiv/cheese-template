@@ -1,0 +1,23 @@
+.field {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+    background-color: #FFF;
+    background-clip: padding-box;
+    border: 1px solid var(--gamma-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: var(--alpha-border-radius);
+	outline: none;
+	transition: 350ms;
+
+	&:hover,
+	&:focus {
+		border-color: var(--alpha-color);
+		transition: 350ms;
+	}
+}

@@ -1,0 +1,94 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: .5rem;
+	padding: 0.375rem 0.75rem;
+	
+	background-color: transparent;
+  	border: 1px solid transparent;
+	border-radius: var(--alpha-border-radius);
+	outline: none;
+	cursor: pointer;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+
+	transition: color 0.350s ease-in-out, background-color 0.350s ease-in-out, border-color 0.350s ease-in-out;
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
+	}
+
+	&--full-width {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	&__icon > * {
+		font-size: 1em;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+		text-decoration: none;
+		transition: color 0.350s ease-in-out, background-color 0.350s ease-in-out, border-color 0.350s ease-in-out;
+
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+		}
+	}
+
+	&--alpha {
+		background-color: var(--gamma-color);
+		border-color: var(--gamma-color);
+		color: #FFF;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: var(--alpha-color);
+			border-color: var(--alpha-color);
+			color: #FFF;
+		}
+	}
+
+	&--betta {
+		background-color: var(--alpha-color);
+		border-color: var(--alpha-color);
+		color: #FFF;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: var(--betta-color);
+			border-color: var(--betta-color);
+			color: #FFF;
+		}
+	}
+
+	&--gamma {
+		background-color: #FFF;
+		border-color: var(--alpha-color);
+		color: var(--alpha-color);
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: var(--alpha-color);
+			border-color: var(--alpha-color);
+			color: #FFF;
+		}
+	}
+}

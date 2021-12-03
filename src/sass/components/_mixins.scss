@@ -1,0 +1,87 @@
+@mixin media-md {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media-max-md {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin media-max-lg {
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+	// For Google Chrome
+	&::-webkit-scrollbar {
+	  width:  $size;
+	  height: $size;
+	}
+  
+	&::-webkit-scrollbar-thumb {
+	  background: $foreground-color;
+	}
+  
+	&::-webkit-scrollbar-track {
+	  background: $background-color;
+	}
+  
+	// For Internet Explorer
+	& {
+	  scrollbar-face-color: $foreground-color;
+	  scrollbar-track-color: $background-color;
+	}
+  }
+
+  @mixin styled-scrollbar {
+	@include scrollbars(10px, var(--alpha-color), var(--gamma-color));
+  }
+
+  @mixin hidden-menu {
+	z-index: 1;
+	position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 350ms;
+
+	@include media-max-lg {
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100vh;
+		overflow-y: auto;
+		max-width: 250px;
+		@include styled-scrollbar;
+	}
+
+	@include media-lg {
+		transform-origin: center;
+		transform: scale(0);
+	}
+}
+
+@mixin show-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: 350ms;
+
+	@include media-max-lg {
+		left: 0;
+	}
+
+	@include media-lg {
+		transform: scale(1);
+	}
+}

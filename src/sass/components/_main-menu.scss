@@ -1,0 +1,113 @@
+.main-menu {
+    display: block;
+    list-style: none;
+    padding: 0 1rem 0 1rem;
+    margin: 0;
+
+    &__btn {
+		
+		@include media-lg {
+            display: none;
+        }
+
+		&:hover + .main-menu__wrapper,
+		&:focus + .main-menu__wrapper,
+		&:active + .main-menu__wrapper {
+			@include media-max-lg {
+				@include show-menu;
+			}
+		}
+    }
+
+    &__wrapper {
+		@include media-max-lg {
+			background-color: var(--gamma-color);
+			padding: .5rem 0;
+			box-shadow: 1px 0 5px var(--gamma-color);
+
+			@include styled-scrollbar;
+			@include hidden-menu;
+		}
+
+		&:hover {
+			@include media-max-lg {
+				@include show-menu;
+			}
+		}
+
+        @include media-lg {
+            display: block;
+        }
+    }
+
+    &__item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px dashed #c38227;
+
+		& > .main-menu__link {
+			flex: 1 auto;
+		}
+
+		& > .main-menu__icon {
+			flex: 0 10px;
+			cursor: pointer;
+			transition: 350ms;
+
+			&.active {
+				transform: scale(-1);
+				transition: 350ms;
+			}
+		}
+
+		& > .main-menu {
+			flex: 1 100%;
+			display: none;
+
+			.main-menu__item {
+				border-top-color: transparent;
+			}
+		}
+
+		&:last-child {
+			border-bottom: 1px dashed #c38227;
+		}
+	}
+
+    &__link {
+        display: flex;
+		gap: .5rem;
+
+        text-decoration: none;
+        font-weight: 600;
+		color: var(--betta-color);
+		
+        padding: .3rem .5rem;
+        transition: 350ms;
+
+		&:before {
+			content: "\f105";
+			font-family: "Font Awesome 6 Free";
+			transition: transform 350ms;
+		}
+		
+        @include media-lg {
+			color: #FFF;
+            padding: .3rem;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--alpha-color);
+
+			&:before {
+				transform: translateX(3px);
+				transition: 350ms transform;
+			}
+        }
+    }
+
+}

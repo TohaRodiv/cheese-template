@@ -1,0 +1,60 @@
+.shop-state {
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem;
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: .5em;
+		color: inherit;
+		padding: .6rem 1.5rem;
+		text-decoration: none;
+		transition: 350ms;
+
+		&:hover, &:focus {
+			color: var(--alpha-color);
+			transition: 350ms;
+		}
+	}
+
+	&__item:hover &__icon {
+	}
+
+	&__count {
+		position: absolute;
+		top: -12px;
+		font-size: .7em;
+
+		&--cart {
+			right: -15px;
+		}
+
+		&--compare {
+			right: -19px;
+		}
+	}
+
+	&__detail {
+		font-size: .7em;
+		max-width: 70px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		@media (max-width: 1400px) {
+			display: none;
+		}
+	}
+
+	&__icon-wrapper {
+		position: relative;
+	}
+
+	&__icon {
+		width: auto;
+		height: 27px;
+		color: inherit;
+	}
+}

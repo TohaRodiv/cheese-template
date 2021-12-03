@@ -1,0 +1,51 @@
+.top {
+	display: block;
+	height: 100vh;
+	overflow-y: auto;
+
+	@include media-lg {
+		display: grid;
+		grid-template-areas: "header main";
+		grid-template-columns: 300px 1fr;
+		grid-template-rows: 1fr;
+	}
+
+	&__top-contacts {
+		grid-area: contacts;
+		padding: .5rem 0;
+
+		@include media-lg {
+			display: none;
+		}
+	}
+
+	&__block-logo {
+		grid-area: logo;
+	}
+
+	&__header {
+		position: sticky;
+		top: 0;
+		z-index: 2;
+		grid-area: header;
+		@include styled-scrollbar;
+
+		@include media-lg {
+			position: relative;
+			top: initial;
+			max-height: 100vh;
+			overflow-y: auto;
+			padding: 1rem 0;
+		}
+	}
+
+	&__main {
+		grid-area: main;
+		@include styled-scrollbar;
+		
+		@include media-lg {
+			height: 100vh;
+			overflow-y: auto;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+.list-angel {
+	& > li {
+		list-style: none;
+		display: flex;
+		gap: .5rem;
+
+		&:before {
+			content: "\f105";
+			font-family: "Font Awesome 6 Free";
+			transition: transform 350ms;
+		}
+
+		&:hover:before {
+			transform: translateX(3px);
+			transition: transform 350ms;
+		}
+	}
+}

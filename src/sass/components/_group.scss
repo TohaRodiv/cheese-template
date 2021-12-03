@@ -1,0 +1,28 @@
+.group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: .5rem;
+	padding: .5rem;
+
+	&--start {
+		justify-content: flex-start;
+	}
+
+	&--end {
+		justify-content: flex-end;
+	}
+
+	&--stretch {
+		justify-content: stretch;
+	}
+
+	&--around {
+		justify-content: space-around;
+	}
+
+	&--between {
+		justify-content: space-between;
+	}
+}

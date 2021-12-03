@@ -1,0 +1,124 @@
+.custom-banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--alpha-border-radius);
+    transition: 350ms;
+}
+
+.custom-banner--sm {
+    height: 235px;
+}
+
+.custom-banner--md {
+    height: 247px;
+}
+
+.custom-banner__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: var(--alpha-border-radius);
+    transition: 350ms;
+}
+
+.custom-banner__body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: 350ms;
+}
+
+.custom-banner__head {
+    color: #fff;
+    margin: 0;
+}
+
+.custom-banner__head-link {
+	text-decoration: none;
+	display: inline-block;
+    font-size: 2rem;
+    color: inherit;
+    transition: 350ms;
+}
+
+.custom-banner__head:hover .custom-banner__head-link {
+    color: var(--alpha-color);
+    transition: 350ms;
+}
+
+.custom-banner__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -0.3rem;
+}
+
+.custom-banner__btn-group>* {
+    margin: 0.3rem;
+}
+
+.custom-banner__body>*+* {
+    margin-top: 1rem;
+}
+
+.custom-banner__btn-betta {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
+.custom-banner__btn:hover,
+.custom-banner__btn:focus {
+    background-color: #fff;
+    color: var(--alpha-color);
+}
+
+.custom-banner__btn-betta:hover,
+.custom-banner__btn-betta:focus {
+    background-color: #fff;
+    color: var(--alpha-color);
+}
+
+.custom-banner:hover .custom-banner__body {
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: 350ms;
+}
+
+.custom-banner:hover .custom-banner__img {
+    transform: scale(1.3);
+    transition: 350ms;
+}
+
+.banners__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    clear: both;
+}
+
+.banners__row>* {
+    flex: 1 280px;
+}
+
+.banners--hover--shadow .custom-banner:hover {
+    box-shadow: 0 7px 21px 0 rgba(0, 0, 0, .1);
+    transition: 350ms;
+}

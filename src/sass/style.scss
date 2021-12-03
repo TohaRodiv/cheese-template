@@ -1,0 +1,37 @@
+:root {
+	--alpha-color: #d44304;
+	--betta-color: #884937;
+	--gamma-color: #fbc95a;
+
+	--swiper-theme-color: var(--alpha-color);
+
+	--alpha-font: sans-serif;
+
+	--alpha-border-radius: 0.25rem;
+}
+
+@import "./components/mixins";
+@import "./components/btn";
+@import "./components/group";
+@import "./components/field";
+@import "./components/list-angel";
+@import "./components/prices";
+
+@import "./components/header";
+@import "./components/section";
+@import "./components/top";
+@import "./components/top-header";
+@import "./components/block-logo";
+@import "./components/main-menu";
+@import "./components/person-area";
+@import "./components/block-search";
+@import "./components/contacts";
+@import "./components/shop-state";
+@import "./components/custom-banner";
+
+@import "./components/top-slider";
+@import "./components/products";
+@import "./components/product-slider";
+@import "./components/product-thumb";
+
+@import "./components/common";

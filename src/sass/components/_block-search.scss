@@ -1,0 +1,26 @@
+.block-search {
+	&__btn {
+
+        &:hover+.block-search__wrapper,
+        &:focus+.block-search__wrapper,
+        &:active+.block-search__wrapper {
+            @include show-menu;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        padding: .5rem;
+
+        background-color: var(--gamma-color);
+		box-shadow: 1px 0 5px var(--gamma-color);
+		border-radius: var(--alpha-border-radius);
+
+        @include hidden-menu;
+
+        &:hover {
+			@include show-menu;
+        }
+
+    }
+}

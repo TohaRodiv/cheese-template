@@ -1,0 +1,25 @@
+.block-logo {
+	padding: .5rem;
+	@include media-lg {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__picture {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	&__logo {
+		max-height: 200px;
+		@include media-max-lg {
+			max-height: 70px;
+		}
+	}
+
+	&__logo-top {
+		max-height: 200px;
+	}
+}

@@ -1,0 +1,134 @@
+.product-thumb {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--alpha-color);
+	border-radius: var(--alpha-border-radius);
+	background-color: #FFF;
+
+    &__image-wrapper {
+		margin-bottom: 1rem;
+		flex: 0 250px;
+		height: 250px;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+
+        &-link {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__image {
+		position: absolute;
+
+		display: block;
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+
+        &--primary {
+			transition: 350ms;
+		}
+
+        &--secondary {
+			transform: scale(0);
+			opacity: 0;
+			visibility: hidden;
+			transition: 350ms;
+		}
+    }
+
+    &__content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 0 .5rem;
+	}
+
+    &__header {
+		flex: 1;
+	}
+
+	&__summary {
+		display: none;
+
+		&--visible {
+			display: block;
+		}
+	}
+
+
+    &__head {
+		margin: 0;
+		line-height: 1.1;
+		font-weight: 600;
+
+        &-link {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--alpha-color);
+                transition: 350ms;
+            }
+        }
+    }
+
+    &__category {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+
+        border-bottom: 1px dashed;
+        color: #BBB;
+
+        transition: 350ms;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--alpha-color);
+            transition: 350ms;
+        }
+    }
+
+    &__prices {
+		margin: .5rem 0;
+	}
+
+
+	&:hover &__image--secondary {
+		transform: scale(1);
+		opacity: 1;
+		visibility: visible;
+		transition: 350ms;
+	}
+
+	&:hover &__image--primary {
+		transform: scale(0);
+		opacity: 0;
+		visibility: hidden;
+		transition: 350ms;
+	}
+
+	&__btn {
+		&-cart {}
+
+		&-view {
+			.btn__text {
+				display: none;
+			}
+		}
+
+		&-compare {
+			.btn__text {
+				display: none;
+			}
+		}
+	}
+}
