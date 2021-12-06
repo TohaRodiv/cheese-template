@@ -1,0 +1,35 @@
+.footer-menu {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	&__item {}
+
+	&__link {
+		text-decoration: none;
+		display: inline-flex;
+		gap: .5rem;
+		color: var(--alpha-color);
+		transition: 350ms;
+
+		&:before {
+			content: "\f7ef";
+			font-family: "Font Awesome 6 Free";
+			font-weight: 600;
+			transition: 350ms;
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--betta-color);
+			transition: 350ms;
+
+			&:before {
+				transform: translateX(3px);
+				transition: 350ms transform;
+			}
+		}
+	}
+}

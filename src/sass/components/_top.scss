@@ -42,6 +42,7 @@
 	&__main {
 		grid-area: main;
 		@include styled-scrollbar;
+		background-color: #FFF;
 		
 		@include media-lg {
 			height: 100vh;

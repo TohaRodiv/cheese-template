@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="/css/libs/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="/css/libs/fontawesome-v6.min.css">
 	<link rel="stylesheet" href="/css/libs/swiper-bundle.min.css">
+	<link rel="stylesheet" href="//fos.lred.ru/cdn/v5.7/fos.css">
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -239,7 +240,7 @@
 			</div>
 		</header>
 
-		<div class="top__main">
+		<div class="top__main __top-main">
 			<!-- Основной раздел -->
 			<main class="main">
 
@@ -1361,20 +1362,226 @@
 
 			</main>
 		</div>
-		<!-- Подвал на всю ширину -->
-		<footer class="footer">
-			<div class="container">
-				Подвал
-			</div>
-		</footer>
 	</div>
 
+	<!-- Подвал на всю ширину -->
+	<footer class="footer top__footer">
+		<div class="section section--without-margin">
+			<header class="section__header section__header--without-radius">
+				<h3 class="section__head">Сырный дом</h3>
+			</header>
+			<article class="section__body section__body--bordered">
+				<div class="footer__inner">
+					<div class="footer__about">
+						<!-- Лого -->
+						<div class="block-logo lazy">
+							<picture class="block-logo__picture">
+								<img src="" data-src="/images/logo/logo-256.png" alt=""
+									class="block-logo__logo-top lazy">
+							</picture>
+						</div>
+					</div>
+					<div class="footer__about-text">
+						<h4 class="footer__head">О нас</h4>
+						<p class="footer__description">
+							Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+							Несколько
+							рыбного единственное ему назад толку вопроса. Правилами меня lorem заглавных все имени
+							своих,
+							однажды щеке это. Эта океана имеет осталось рыбными назад?
+						</p>
+					</div>
+					<div class="footer__menu">
+						<h4 class="footer__head">Меню</h4>
+						<ul class="footer-menu">
+							<li class="footer-menu__item">
+								<a href="" class="footer-menu__link">Главная</a>
+							</li>
+							<li class="footer-menu__item">
+								<a href="" class="footer-menu__link">Главная</a>
+							</li>
+							<li class="footer-menu__item">
+								<a href="" class="footer-menu__link">Главная</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__menu">
+						<h4 class="footer__head">Каталог</h4>
+						<ul class="footer-menu">
+							<li class="footer-menu__item">
+								<a href="" class="footer-menu__link">Главная</a>
+							</li>
+							<li class="footer-menu__item">
+								<a href="" class="footer-menu__link">Главная</a>
+							</li>
+							<li class="footer-menu__item">
+								<a href="" class="footer-menu__link">Главная</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__callback">
+						<h4 class="footer__head">Оставить заявку / Задать вопрос</h4>
+						<div class="lredform form_bg">
+							<form method="post" action="/lredmail.php" enctype="multipart/form-data">
+								<input type="hidden" name="action" value="feedback">
+
+								<input type="text" required name="lred_name" placeholder="Имя">
+								<p class="err_message"></p>
+
+								<input type="text" required name="lred_phone" placeholder="Телефон">
+								<p class="err_message"></p>
+
+								<textarea name="lred_message" placeholder="Текст сообщения"></textarea>
+								<p class="err_message"></p>
+
+								<button type="submit" class="input_submit btn btn--betta btn--full-width">
+									<span class="btn__icon">
+										<span class="fa fa-paper-plane"></span>
+									</span>
+									<span class="btn__text">
+										Отправить
+									</span>
+								</button>
+								<input type="hidden" name="lred_subject" value="Тема сообщения базовой формы">
+								<div class="redAgree">
+									<div class="redChekboxAgree checked"></div>
+									<div class="redTextAgree">Нажимая на кнопку ОТПРАВИТЬ, я даю согласие на обработку
+										персональных данных</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer__contacts">
+						<h4 class="footer__head">Контакты</h4>
+						<ul class="contacts">
+							<li class="contacts__item">
+								<a href="" class="contacts__link">
+									<span class="contacts__icon">
+										<span class="fa fa-map"></span>
+									</span>
+									<span class="contacts__text">Ул. Ленина 35</span>
+								</a>
+							</li>
+							<li class="contacts__item">
+								<a href="" class="contacts__link">
+									<span class="contacts__icon">
+										<span class="fa fa-clock"></span>
+									</span>
+									<span class="contacts__text">Пн-Пт: с 9:00 - 19:20</span>
+								</a>
+							</li>
+							<li class="contacts__item">
+								<a href="" class="contacts__link">
+									<span class="contacts__icon">
+										<span class="fa fa-envelope"></span>
+									</span>
+									<span class="contacts__text">test@mail.com</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="footer-menu footer__usefull">
+					<li class="footer-menu__item">
+						<a href="" class="footer-menu__link">Главная</a>
+					</li>
+					<li class="footer-menu__item">
+						<a href="" class="footer-menu__link">Главная</a>
+					</li>
+					<li class="footer-menu__item">
+						<a href="" class="footer-menu__link">Главная</a>
+					</li>
+				</ul>
+			</article>
+			<footer class="section__footer section__footer--inner">
+				<div class="group footer__section-group">
+					<div class="footer__copyright-wrapper">
+						<div>&copy; 2022 - Сырный дом</div>
+						<div>Создание сайта, обслуживание и продвижение сайтов - РЭДЛАЙН</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</footer>
+
+
+
+	<!-- FORM START -->
+	<div id="order" class="lredmod">
+		<div class="lredform form_bg">
+			<form method="post" action="/wa-data/public/shop/lredmail.php" class="red-modal"
+				enctype="multipart/form-data">
+				<input type="hidden" name="action" value="feedback">
+				<p class="title_form"><span>Оставить заявку / Задать вопрос</span></p>
+
+				<div class="form-wrap form-wrap_icon">
+					<input type="text" required="required" name="lred_name" placeholder="Имя" class="form-input">
+					<p class="err_message"></p>
+				</div>
+
+				<div class="form-wrap form-wrap_icon">
+					<input type="text" required="required" name="lred_phone" placeholder="Телефон" class="form-input">
+					<p class="err_message"></p>
+				</div>
+
+				<div class="form-wrap form-wrap_icon">
+					<input type="text" name="lred_email" placeholder="E-mail" class="form-input">
+					<p class="err_message"></p>
+				</div>
+
+				<div class="form-wrap form-wrap_icon">
+					<textarea name="lred_message" placeholder="Текст сообщения" class="form-input"></textarea>
+					<p class="err_message"></p>
+				</div>
+
+				<div class="report_result"></div>
+
+				<button type="submit" class="input_submit btn btn--betta btn--full-width">
+					<span class="btn__icon">
+						<span class="fa fa-paper-plane"></span>
+					</span>
+					<span class="btn__text">
+						Отправить
+					</span>
+				</button>
+
+				<input type="hidden" name="lred_subject" value="Заявка/вопрос с сайта prohockey-dv.ru">
+				<div class="redAgree">
+					<div class="redChekboxAgree checked"></div>
+					<div class="redTextAgree">Нажимая на кнопку ОТПРАВИТЬ, я даю <a href="/privacy-policy"
+							target="_blank">согласие на обработку персональных данных</a></div>
+				</div>
+			</form>
+		</div>
+		<a class="lredmod-close">&#215;</a>
 	</div>
+	<!-- FORM END -->
+
+
+	<!-- Результаты отправки данных скрипту -->
+	<div class="lredthanks" id="lredmodSuccess">
+		<div class="lredmod-close">&#215;</div>
+		<div class="msg"></div>
+	</div>
+	<div class="lredthanks" id="lredmodFail">
+		<div class="lredmod-close">&#215;</div>
+		<div class="msg"></div>
+	</div>
+
+	<a href="#top" class="to-top __to-top">
+		<span class="fa fa-angle-up"></span>
+	</a>
+
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="js/libs/lazyload.min.js" async></script>
 	<script src="/js/libs/swiper-bundle.min.js"></script>
+	<script src="//fos.lred.ru/cdn/v5.5/fos.js"></script>
+	<!-- <script>
+		let publicSitekey = '<PUBLIC-KEY>';
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadReCaptchaInvisible&render=explicit" async defer></script> -->
 	<script src="/js/script.js"></script>
 </body>
 

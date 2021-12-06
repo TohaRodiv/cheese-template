@@ -1,7 +1,9 @@
 .section {
     margin: 1rem 0;
-    border: 1px solid transparent;
-    border-radius: var(--alpha-border-radius);
+	
+	&--without-margin {
+		margin: 0;
+	}
 
 	&__body {
         padding: 1rem;
@@ -17,6 +19,10 @@
 		border-radius: var(--alpha-border-radius) var(--alpha-border-radius) 0 0;
 		background-color: var(--alpha-color);
 		color: #FFF;
+
+		&--without-radius {
+			border-radius: 0;
+		}
     }
 
     &__body {

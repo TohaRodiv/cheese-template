@@ -104,5 +104,49 @@
 
 	})();
 
+	(() => {
+		const toTopBtn = document.querySelector(".__to-top");
+		const scrollContent = document.querySelector(".__top-main");
+
+		if (toTopBtn && scrollContent) {
+			toTopBtn.addEventListener('click', e => {
+				e.preventDefault();
+				pageScrollTop();
+			});
+			handlePageScroll();
+
+			window.addEventListener('scroll', handlePageScroll);
+			scrollContent.addEventListener('scroll', handlePageScroll);
+		}
+
+		function pageScrollTop() {
+			[window, scrollContent].forEach(itemScroll => {
+				itemScroll.scroll({
+					top: 0,
+					left: 0,
+					behavior: 'smooth',
+				});
+			});
+			toTopBtn.classList.remove('hidden');
+		}
+
+		function isReadyActive (scrollPos, scrollHeight) {
+			return scrollPos > scrollHeight / 3;
+		}
+
+		function handlePageScroll() {
+			let windowScroll = window.pageYOffset;
+			let windowHeight = window.outerHeight;
+
+			let scrollContentScroll = scrollContent.scrollTop;
+
+			if (isReadyActive(windowScroll, windowHeight) || isReadyActive(scrollContentScroll, windowHeight)) {
+				toTopBtn.classList.remove('hidden');
+			} else {
+				toTopBtn.classList.add('hidden');
+			}
+		}
+	})();
+
 
 })($);
