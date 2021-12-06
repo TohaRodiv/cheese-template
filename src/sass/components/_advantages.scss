@@ -1,0 +1,47 @@
+.advantages {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__item {
+        list-style: none;
+        flex: 1 300px;
+    }
+}
+
+.advantage {
+    border: 1px solid var(--gamma-color);
+    border-radius: var(--alpha-border-radius);
+    background-color: var(--gamma-color);
+    
+
+    text-align: center;
+    padding: .5rem;
+    color: #000;
+    cursor: default;
+    transition: 350ms;
+
+    &__icon {
+        color: var(--alpha-color);
+        font-size: 1.5rem;
+		transition: 350ms;
+    }
+
+    &__head {}
+
+    &__subhead {}
+
+    &:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 3px 5px var(--gamma-color);
+        transition: 350ms;
+    }
+
+	&:hover &__icon {
+		color: #000;
+		transition: 350ms;
+	}
+}

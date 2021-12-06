@@ -38,23 +38,70 @@
 			},
 		});
 
-		new Swiper(".__products-slider", {
-			slidesPerView: 4,
-			spaceBetween: 10,
+		document.querySelectorAll(".__products-slider").forEach(slider => {
+			new Swiper(slider, {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				pagination: {
+					el: '.__product-slider-pagination',
+					type: 'bullets',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.__product-slider-button-next',
+					prevEl: '.__product-slider-button-prev',
+				},
+				autoplay: {
+					delay: 5000,
+					pauseOnMouseEnter: true,
+				},
+				breakpoints: {
+					576: {
+						slidesPerView: 2,
+						spaceBetween: 10,
+					},
+
+					1200: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+
+					1400: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+					}
+				},
+			});
+		});
+
+		new Swiper(".__news-slider", {
+			slidesPerView: 1,
+			navigation: {
+				nextEl: '.__product-slider-button-next',
+				prevEl: '.__product-slider-button-prev',
+			},
 			pagination: {
 				el: '.__product-slider-pagination',
 				type: 'bullets',
 				clickable: true,
 			},
-			navigation: {
-				nextEl: '.__product-slider-button-next',
-				prevEl: '.__product-slider-button-prev',
-			},
 			autoplay: {
 				delay: 5000,
 				pauseOnMouseEnter: true,
 			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+			},
 		});
+
 	})();
 
 

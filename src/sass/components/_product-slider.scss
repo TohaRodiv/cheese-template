@@ -3,7 +3,7 @@
 
 	&__wrapper {
 		margin: 0;
-		padding: 0;
+		padding: 0 0 30px;
 	}
 
 	&__slide {
@@ -14,5 +14,26 @@
 
 	&__thumb {
 		width: 100%;
+	}
+
+	&__btn {
+		position: relative;
+		left: initial;
+		right: initial;
+		transition: 350ms;
+
+		&:after {
+			font-size: 1rem;
+		}
+
+		&.swiper-button-disabled {
+			opacity: .3;
+			cursor: not-allowed;
+			transition: 350ms;
+		}
+	}
+
+	.swiper-pagination {
+		bottom: 0;
 	}
 }
