@@ -250,9 +250,8 @@
         overflow-y: auto; } }
 
 .top-header {
-  background-color: var(--gamma-color);
   color: #FFF;
-  background: url(/images/backgrounds/background-1200.png); }
+  background: var(--gamma-color) url(/images/backgrounds/background-1200.png); }
   @media (max-width: 991px) {
     .top-header {
       box-shadow: 0 3px 5px var(--gamma-color); } }
